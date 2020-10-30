@@ -25,7 +25,7 @@ ml R/4.0.2-foss-2019b
 bwa index Yam_ref.fasta
 
 ## --- adding read group IDs --- #
-bwa mem -t 16 -R '@RG\tID:Yam_L001\tLB:Yam_L001\tPL:ILLUMINA\tPM:HISEQ\tSM:Yam_L001' Dioscorea_dumetorum_v1.0.fasta /gss/work/wupf2892/trimodata/Yam_L001_R1paired.fastq.gz /gss/work/wupf2892/trimodata/Yam_L001_R2paired.fastq.gz > Yam_ref_Aligned.reads.sam
+bwa mem -t 16 -R '@RG\tID:Yam_L001\tLB:Yam_L001\tPL:ILLUMINA\tPM:HISEQ\tSM:Yam_L001' Yam_ref.fasta Yam_L001_R1paired.fastq.gz Yam_L001_R2paired.fastq.gz > Yam_ref_Aligned.reads.sam
 
 samtools faidx Yam_ref.fasta
 
